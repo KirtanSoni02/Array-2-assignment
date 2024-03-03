@@ -1,0 +1,142 @@
+1.
+#include <iostream>
+#include<vector>
+using namespace std;
+int main() {
+    int x;
+    vector<int> v={2,3,4,5,6,7,8};
+    cout<<"enter the element"<<endl;
+    cin>>x;
+    int count=0;
+    for(int ele : v){
+        if(ele>x) count++;
+    }
+    cout<<count;
+    return 0;
+}
+
+2.
+#include <iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int main() {
+    vector<int> arr={2,3,4,5,6,7};
+    for(int ele : arr) cout<<ele<<" ";
+    cout<<endl;
+    sort(arr.begin(),arr.end());
+    reverse(arr.begin(),arr.end());
+    cout<<"The largest three elements are "<<arr[0]<<","<<arr[1]<<","<<arr[2];
+}
+
+
+3.
+#include <iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int main() {
+    vector<int> arr={2,3,4,5,6,7};
+    for(int ele : arr) cout<<ele<<" ";
+    cout<<endl;
+    bool flag=false;
+    for(int i=0;i<arr.size()-1;i++){
+        if(arr[i]>arr[i+1]){
+            flag=true;
+        }
+    }
+    if(flag==false) cout<<"array is sorted";
+    else cout<<"array is unsorted";
+}
+
+
+
+4.
+#include <iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int main() {
+    vector<int> arr={2,3,4,5,6,7};
+    for(int ele : arr) cout<<ele<<" ";
+    cout<<endl;
+    int se=0;
+    int so=0;
+    for(int i=0;i<arr.size();i++){
+        if(i%2==0) se+=arr[i];
+        else so+=arr[i];
+    }
+    cout<<"the difference is "<<se-so;
+}
+
+
+5.
+#include <iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int main() {
+    vector<int> arr={2,3,4,5,6,7};
+    for(int ele : arr) cout<<ele<<" ";
+    cout<<endl;
+  
+    for(int i=0;i<arr.size();i++){
+        if(i%2==0) arr[i]+=10;
+        else arr[i]*=2;
+    }
+    
+ for(int ele : arr) cout<<ele<<" ";
+    cout<<endl;
+}
+
+
+
+6.
+#include <iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int main() {
+    vector<int> arr={2,3,2,5,6,7,5,6,7};
+    for(int ele : arr) cout<<ele<<" ";
+    cout<<endl;
+    sort(arr.begin(),arr.end());
+    for(int i=0;i<arr.size();i+=2){
+        if(arr[i]!=arr[i+1]) {
+            cout<<arr[i];
+            break;
+        }
+    }
+}
+
+
+7.
+#include <iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int main() {
+    vector<int> arr={2,3,2,5,6,7,5,6,7};
+    for(int ele : arr) cout<<ele<<" ";
+    cout<<endl;
+    bool flag=false;
+    int i=0;
+    int j=arr.size()-1;
+    while(i<j){
+        if(arr[i]!=arr[j]) {
+            flag=true;
+            break;
+        }
+        i++;
+        j--;
+    }
+    if(flag==false) cout<<"Palindrome";
+    else cout<<"Not Palindrome";
+}
+
+8.Here in the calling of the function it will come avg = getAverage( balance, 5 ) 
+as the array will have to be passed not the value
+
+
+
+
